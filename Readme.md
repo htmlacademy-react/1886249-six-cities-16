@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
-* Студент: [Anna Kudrow](https://up.htmlacademy.ru/react/16/user/1886249).
-* Наставник: `Неизвестно`.
+- Студент: [Anna Kudrow](https://up.htmlacademy.ru/react/16/user/1886249).
+- Наставник: Артём Новоселов.
 
 ---
 
