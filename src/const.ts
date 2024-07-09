@@ -1,4 +1,4 @@
-const CITIES = [
+export const CITIES = [
   'Paris',
   'Cologne',
   'Brussels',
@@ -7,4 +7,7 @@ const CITIES = [
   'Dusseldorf',
 ] as const;
 
-export default CITIES;
+export const FOUND_PLASES = 312;
+
+// export  CITIES;
+// export  FOUND_PLASES;

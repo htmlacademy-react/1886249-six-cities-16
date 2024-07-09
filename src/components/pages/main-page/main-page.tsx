@@ -1,6 +1,6 @@
 import Card from '../../card/Card';
 import Header from '../../header/header';
-import cardData from '../../mocks/mocks';
+import CARD_DATA from '../../mocks/mocks';
 import NavigationCitiesList from '../../navigation-cities-list/navigation-cities-list';
 import SortForm from '../../sort-form/sort-form';
 import Map from '../../map/map';
@@ -8,12 +8,6 @@ import Map from '../../map/map';
 type MainPageProps = {
   foundPlaces: number;
 };
-
-// type CardProps = {
-//   previewImage: string;
-//   price: number;
-//   title: string;
-// };
 
 function MainPage({ foundPlaces }: MainPageProps): JSX.Element {
   return (
@@ -35,7 +29,7 @@ function MainPage({ foundPlaces }: MainPageProps): JSX.Element {
               </b>
               <SortForm />
               <div className="cities__places-list places__list tabs__content">
-                {cardData.map((data) => (
+                {CARD_DATA.map((data) => (
                   <Card
                     key={data.title}
                     previewImage={data.previewImage}

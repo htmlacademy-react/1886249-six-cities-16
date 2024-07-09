@@ -1,14 +1,16 @@
-import CITIES from '../../const';
+import { CITIES } from '../../const';
 
-type Cities = {
-  city: string;
+type NavigationCitiesItemProps = {
+  cityName: string;
 };
 
-function NavigationCitiesItem({ city }: Cities): JSX.Element {
+function NavigationCitiesItem({
+  cityName,
+}: NavigationCitiesItemProps): JSX.Element {
   return (
     <li className="locations__item">
       <a className="locations__item-link tabs__item" href="#">
-        <span>{city}</span>
+        <span>{cityName}</span>
       </a>
     </li>
   );
@@ -18,7 +20,7 @@ function NavigationCitiesList(): JSX.Element {
   return (
     <ul className="locations__list tabs__list">
       {CITIES.map((city) => (
-        <NavigationCitiesItem key={city} city={city} />
+        <NavigationCitiesItem key={city} cityName={city} />
       ))}
     </ul>
   );

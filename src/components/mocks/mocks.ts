@@ -1,4 +1,4 @@
-const cardData = [
+const CARD_DATA = [
   {
     id: '36930731-3756-40ea-a778-f6d203910772',
     title: 'Beautiful & luxurious apartment at great location',
@@ -114,6 +114,6 @@ const cardData = [
     isPremium: false,
     rating: 3,
   },
-];
+] as const;
 
-export default cardData;
+export default CARD_DATA;
