@@ -1,7 +1,7 @@
 import LoginForm from '../../login-form/login-form';
 import Logo from '../../logo/logo';
 
-function LoginPage() {
+function LoginPage(): JSX.Element {
   return (
     <div className="page page--gray page--login">
       <header className="header">

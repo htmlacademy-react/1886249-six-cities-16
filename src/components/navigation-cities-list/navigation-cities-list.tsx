@@ -1,4 +1,4 @@
-import CITIES from '../const';
+import CITIES from '../../const';
 
 type Cities = {
   city: string;

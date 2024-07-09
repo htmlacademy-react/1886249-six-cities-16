@@ -1,4 +1,4 @@
-function Logo() {
+function Logo(): JSX.Element {
   return (
     <a className="header__logo-link header__logo-link--active">
       <img

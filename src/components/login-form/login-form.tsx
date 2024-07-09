@@ -1,4 +1,4 @@
-function LoginForm() {
+function LoginForm(): JSX.Element {
   return (
     <section className="login">
       <h1 className="login__title">Sign in</h1>
