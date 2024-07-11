@@ -1,9 +1,9 @@
-import Card from '../../card/Card';
-import Header from '../../header/header';
-import CARD_DATA from '../../mocks/mocks';
-import NavigationCitiesList from '../../navigation-cities-list/navigation-cities-list';
-import SortForm from '../../sort-form/sort-form';
-import Map from '../../map/map';
+import Card from '../../components/card/Card';
+import Header from '../../components/header/header';
+import CARD_DATA from '../../components/mocks/mocks';
+import NavigationCitiesList from '../../components/navigation-cities-list/navigation-cities-list';
+import SortForm from '../../components/sort-form/sort-form';
+import Map from '../../components/map/map';
 
 type MainPageProps = {
   foundPlaces: number;

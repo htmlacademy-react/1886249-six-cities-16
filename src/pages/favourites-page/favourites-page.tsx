@@ -1,6 +1,6 @@
-import Header from '../../header/header';
-import Footer from '../../footer/footer';
-import FavouriteList from '../../favourite-list/fovourite-list';
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
+import FavouriteList from '../../components/favourite-list/fovourite-list';
 function FavouritePage(): JSX.Element {
   return (
     <div className="page">

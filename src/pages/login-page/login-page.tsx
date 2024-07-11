@@ -1,5 +1,5 @@
-import LoginForm from '../../login-form/login-form';
-import Logo from '../../logo/logo';
+import LoginForm from '../../components/login-form/login-form';
+import Logo from '../../components/logo/logo';
 
 function LoginPage(): JSX.Element {
   return (
