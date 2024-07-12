@@ -4,17 +4,35 @@ import { FOUND_PLASES } from '../../const';
 import FavouritePage from '../../pages/favourites-page/favourites-page';
 import LoginPage from '../../pages/login-page/login-page';
 import OfferPage from '../../pages/offer-page/offer-page';
+import ErrorPage from '../../pages/error-page/error-page';
+import { AppRoute } from '../../const';
+import PrivateRoute from '../private-route/private-route';
+import { AuthorisationStatus } from '../../const';
+import { HelmetProvider } from 'react-helmet-async';
 
 function App(): JSX.Element {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainPage foundPlaces={FOUND_PLASES} />} />
-        <Route path="/favourites" element={<FavouritePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/offer/:id" element={<OfferPage />} />
-      </Routes>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path={AppRoute.Root}
+            element={<MainPage foundPlaces={FOUND_PLASES} />}
+          />
+          <Route
+            path={AppRoute.Favourites}
+            element={
+              <PrivateRoute authorisationStatus={AuthorisationStatus.NoAuth}>
+                <FavouritePage />
+              </PrivateRoute>
+            }
+          />
+          <Route path={AppRoute.Login} element={<LoginPage />} />
+          <Route path={AppRoute.Offer} element={<OfferPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

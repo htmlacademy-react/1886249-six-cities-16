@@ -9,5 +9,15 @@ export const CITIES = [
 
 export const FOUND_PLASES = 312;
 
-// export  CITIES;
-// export  FOUND_PLASES;
+export enum AppRoute {
+  Root = '/',
+  Favourites = '/favourites',
+  Login = '/login',
+  Offer = '/offer/:id',
+}
+
+export enum AuthorisationStatus {
+  Auth = 'AUTH',
+  NoAuth = 'NO_AUTH',
+  Unknown = 'UNKNOWN',
+}
