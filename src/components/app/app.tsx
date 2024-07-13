@@ -18,18 +18,25 @@ import { HelmetProvider } from 'react-helmet-async';
 
 function App(): JSX.Element {
   const router = createBrowserRouter([
-    { path: AppRoute.Root, element: <MainPage foundPlaces={FOUND_PLASES} /> },
     {
-      path: AppRoute.Favourites,
-      element: (
-        <PrivateRoute authorisationStatus={AuthorisationStatus.NoAuth}>
-          <FavouritePage />
-        </PrivateRoute>
-      ),
+      children: [
+        {
+          path: AppRoute.Root,
+          element: <MainPage foundPlaces={FOUND_PLASES} />,
+        },
+        {
+          path: AppRoute.Favourites,
+          element: (
+            <PrivateRoute authorisationStatus={AuthorisationStatus.NoAuth}>
+              <FavouritePage />
+            </PrivateRoute>
+          ),
+        },
+        { path: AppRoute.Login, element: <LoginPage /> },
+        { path: AppRoute.Offer, element: <OfferPage /> },
+      ],
+      errorElement: <ErrorPage />,
     },
-    { path: AppRoute.Login, element: <LoginPage /> },
-    { path: AppRoute.Offer, element: <OfferPage /> },
-    { path: '*', element: <ErrorPage /> },
   ]);
 
   return (
