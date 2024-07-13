@@ -4,6 +4,7 @@ import CARD_DATA from '../../components/mocks/mocks';
 import NavigationCitiesList from '../../components/navigation-cities-list/navigation-cities-list';
 import SortForm from '../../components/sort-form/sort-form';
 import Map from '../../components/map/map';
+import { Helmet } from 'react-helmet-async';
 
 type MainPageProps = {
   foundPlaces: number;
@@ -12,6 +13,9 @@ type MainPageProps = {
 function MainPage({ foundPlaces }: MainPageProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
+      <Helmet>
+        <title>6 cities</title>
+      </Helmet>
       <Header />
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
