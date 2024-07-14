@@ -1,7 +1,8 @@
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
-import FavouriteList from '../../components/favourite-list/fovourite-list';
+import FavouriteList from '../../components/favourite-list/favourite-list';
 import { Helmet } from 'react-helmet-async';
+
 function FavouritePage(): JSX.Element {
   return (
     <div className="page">

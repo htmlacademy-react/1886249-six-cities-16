@@ -1,16 +1,10 @@
-import {
-  // Route,
-  // BrowserRouter,
-  // Routes,
-  createBrowserRouter,
-  RouterProvider,
-} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MainPage from '../../pages/main-page/main-page';
 import { FOUND_PLASES } from '../../const';
 import FavouritePage from '../../pages/favourites-page/favourites-page';
 import LoginPage from '../../pages/login-page/login-page';
 import OfferPage from '../../pages/offer-page/offer-page';
-import ErrorPage from '../../pages/error-page/error-page';
+import ErrorPage from '../../pages/error-page/not-found-page';
 import { AppRoute } from '../../const';
 import PrivateRoute from '../private-route/private-route';
 import { AuthorisationStatus } from '../../const';

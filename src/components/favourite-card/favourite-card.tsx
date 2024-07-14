@@ -1,29 +1,25 @@
+import { Link } from 'react-router-dom';
 import BookmarkButton from '../bookmark-button/bookmark-button';
+import { CardProps } from '../card/Card';
 
-export type CardProps = {
-  previewImage: string;
-  price: number;
-  title: string;
-};
-
-function Card({ previewImage, price, title }: CardProps): JSX.Element {
+function FavouriteCard({ previewImage, price, title }: CardProps): JSX.Element {
   return (
-    <article className="cities__card place-card">
+    <article className="favorites__card place-card">
       <div className="place-card__mark">
         <span>Premium</span>
       </div>
-      <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#">
+      <div className="favorites__image-wrapper place-card__image-wrapper">
+        <Link to="#">
           <img
             className="place-card__image"
             src={previewImage}
-            width="260"
-            height="200"
+            width="150"
+            height="110"
             alt="Place image"
           />
-        </a>
+        </Link>
       </div>
-      <div className="place-card__info">
+      <div className="favorites__card-info place-card__info">
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
             <b className="place-card__price-value">&euro;{price}</b>
@@ -33,12 +29,12 @@ function Card({ previewImage, price, title }: CardProps): JSX.Element {
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
-            <span style={{ width: '80%' }}></span>
+            <span style={{ width: '100%' }}></span>
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{title}</a>
+          <Link to="#">{title}</Link>
         </h2>
         <p className="place-card__type">Apartment</p>
       </div>
@@ -46,4 +42,4 @@ function Card({ previewImage, price, title }: CardProps): JSX.Element {
   );
 }
 
-export default Card;
+export default FavouriteCard;
