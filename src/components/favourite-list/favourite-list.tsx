@@ -1,6 +1,6 @@
 import FavouriteCard from '../favourite-card/favourite-card';
-import { FAV_CARD_DATA_AMSTER } from '../mocks/mocks';
-import { FAV_CARD_DATA_COLOGNE } from '../mocks/mocks';
+import { FAV_CARD_DATA_AMSTER } from '../mocks/favourite-mocks';
+import { FAV_CARD_DATA_COLOGNE } from '../mocks/favourite-mocks';
 
 function FavouriteList(): JSX.Element {
   return (

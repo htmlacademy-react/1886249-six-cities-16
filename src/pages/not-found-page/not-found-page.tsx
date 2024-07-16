@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-function ErrorPage() {
+function NotFoundPage() {
   return (
     <div style={{ textAlign: 'center' }}>
       <Helmet>
@@ -12,4 +12,4 @@ function ErrorPage() {
     </div>
   );
 }
-export default ErrorPage;
+export default NotFoundPage;

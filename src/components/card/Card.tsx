@@ -1,4 +1,5 @@
 import BookmarkButton from '../bookmark-button/bookmark-button';
+// import CARD_DATA from '../mocks/main-mocks';
 
 export type CardProps = {
   previewImage: string;
