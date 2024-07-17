@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import MainPage, { FoundPlacesProps } from '../../pages/main-page/main-page';
+import MainPage from '../../pages/main-page/main-page';
 import FavouritePage from '../../pages/favourites-page/favourites-page';
 import LoginPage from '../../pages/login-page/login-page';
 import OfferPage from '../../pages/offer-page/offer-page';
@@ -9,7 +9,11 @@ import PrivateRoute from '../private-route/private-route';
 import { AuthorisationStatus } from '../../const';
 import { HelmetProvider } from 'react-helmet-async';
 
-function App({ foundPlaces }: FoundPlacesProps): JSX.Element {
+export type AppProps = {
+  foundPlaces: number;
+};
+
+function App({ foundPlaces }: AppProps): JSX.Element {
   const router = createBrowserRouter([
     {
       children: [
@@ -26,7 +30,10 @@ function App({ foundPlaces }: FoundPlacesProps): JSX.Element {
           ),
         },
         { path: AppRoute.Login, element: <LoginPage /> },
-        { path: AppRoute.Offer, element: <OfferPage /> },
+        {
+          path: AppRoute.Offer,
+          element: <OfferPage />,
+        },
       ],
       errorElement: <NotFoundPage />,
     },

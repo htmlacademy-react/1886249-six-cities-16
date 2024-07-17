@@ -39,6 +39,7 @@ function MainPage({ foundPlaces }: FoundPlacesProps): JSX.Element {
                     previewImage={data.previewImage}
                     price={data.price}
                     title={data.title}
+                    id={data.id}
                   />
                 ))}
               </div>

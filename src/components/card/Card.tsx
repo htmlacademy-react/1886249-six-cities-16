@@ -1,20 +1,29 @@
+import React from 'react';
 import BookmarkButton from '../bookmark-button/bookmark-button';
-// import CARD_DATA from '../mocks/main-mocks';
+import { Link } from 'react-router-dom';
 
 export type CardProps = {
   previewImage: string;
   price: number;
   title: string;
+  id: string;
 };
 
-function Card({ previewImage, price, title }: CardProps): JSX.Element {
+function Card({ previewImage, price, title, id }: CardProps): JSX.Element {
+  const [isActive, setIstActive] = React.useState(false);
+
   return (
-    <article className="cities__card place-card">
+    <article
+      onMouseOver={() => {
+        setIstActive(isActive ? isActive === true : isActive === false);
+      }}
+      className="cities__card place-card"
+    >
       <div className="place-card__mark">
         <span>Premium</span>
       </div>
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#">
+        <Link to={`/offer/${id}`}>
           <img
             className="place-card__image"
             src={previewImage}
@@ -22,7 +31,7 @@ function Card({ previewImage, price, title }: CardProps): JSX.Element {
             height="200"
             alt="Place image"
           />
-        </a>
+        </Link>
       </div>
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
@@ -39,7 +48,7 @@ function Card({ previewImage, price, title }: CardProps): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{title}</a>
+          <Link to={`/offer/${id}`}>{title}</Link>
         </h2>
         <p className="place-card__type">Apartment</p>
       </div>
