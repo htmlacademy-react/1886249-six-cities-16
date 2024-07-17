@@ -1,8 +1,15 @@
 import React from 'react';
-// import TestForm from './test-review.form';
 
 function ReviewForm() {
-  // const [formData, setFormData] = React.useState({});
+  const [formData, setFormData] = React.useState({
+    reviewRating: '',
+    review: '',
+  });
+
+  const fieldChangeHandle = (evt) => {
+    const { name, value } = evt.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   return (
     <form className="reviews__form form" action="#" method="post">
@@ -92,10 +99,12 @@ function ReviewForm() {
         </label>
       </div>
       <textarea
+        onChange={fieldChangeHandle}
         className="reviews__textarea form__textarea"
         id="review"
         name="review"
         placeholder="Tell how was your stay, what you like and what can be improved"
+        value={formData.review}
       >
         {' '}
       </textarea>
@@ -112,8 +121,6 @@ function ReviewForm() {
         >
           Submit
         </button>
-
-        {/* <TestForm { firstname, lastname, review } /> */}
       </div>
     </form>
   );
